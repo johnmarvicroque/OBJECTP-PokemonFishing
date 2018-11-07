@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="537.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
+   <children>
+      <ImageView fitHeight="165.0" fitWidth="375.0" layoutX="-1.0" layoutY="370.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/Misc/MovementPanel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="374.0" fitWidth="373.0" layoutX="2.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/Locales/Fiore'sSea.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player" fitHeight="25.0" fitWidth="37.0" layoutX="29.0" layoutY="284.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/Charcters/LeftRowBoat.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="47.0" layoutY="413.0" mnemonicParsing="false" onAction="#moveUp" text="^" />
+      <Button layoutX="14.0" layoutY="439.0" mnemonicParsing="false" onAction="#moveLeft" text="&lt;" />
+      <Button layoutX="80.0" layoutY="439.0" mnemonicParsing="false" onAction="#moveRight" text="&gt;" />
+      <Button layoutX="48.0" layoutY="465.0" mnemonicParsing="false" onAction="#moveDown" text="v" />
+      <Button fx:id="fish" layoutX="271.0" layoutY="439.0" mnemonicParsing="false" onAction="#fish" prefHeight="26.0" prefWidth="50.0" text="Fish" />
+      <ImageView fx:id="dBox" fitHeight="54.0" fitWidth="349.0" layoutX="14.0" layoutY="312.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/Misc/DialogBox.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="MsgBox" layoutX="32.0" layoutY="305.0" prefHeight="34.0" prefWidth="288.0" />
+      <Label layoutX="122.0" layoutY="404.0" text="Fame:" />
+      <Label layoutX="118.0" layoutY="430.0" text="Money:" />
+      <Label fx:id="fame" layoutX="169.0" layoutY="404.0" />
+      <Label fx:id="money" layoutX="169.0" layoutY="430.0" />
+      <Label layoutX="118.0" layoutY="457.0" text="MovesLeft:" />
+      <Label fx:id="movesLeft" layoutX="195.0" layoutY="456.0" prefHeight="18.0" prefWidth="25.0" />
+      <Label layoutX="118.0" layoutY="482.0" text="CastsLeft:" />
+      <Label fx:id="castsLeft" layoutX="188.0" layoutY="482.0" />
+      <Label layoutX="12.0" layoutY="380.0" text="Day " />
+      <Label fx:id="day" layoutX="45.0" layoutY="380.0" />
+      <Button fx:id="shop" layoutX="274.0" layoutY="469.0" mnemonicParsing="false" onAction="#openShop" text="Shop" />
+      <ImageView fx:id="shopWindow" fitHeight="180.0" fitWidth="235.0" layoutX="123.0" layoutY="104.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../resources/Misc/Shop.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="shopCombo" layoutX="144.0" layoutY="135.0" prefHeight="26.0" prefWidth="153.0" promptText="Shop" visible="false" />
+      <Button fx:id="shopBtn" layoutX="151.0" layoutY="237.0" mnemonicParsing="false" onAction="#buyItem" text="Buy" visible="false" />
+      <Button fx:id="cancel" layoutX="266.0" layoutY="237.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" visible="false" />
+      <TextField fx:id="shopField" layoutX="147.0" layoutY="174.0" promptText=" EnterProductNumber" visible="false" />
+      <Label fx:id="total" layoutX="62.0" layoutY="500.0" prefHeight="18.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>
